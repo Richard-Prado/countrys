@@ -1,9 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { PrismaService } from './prisma/prisma.service';
 
 @Controller('country')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+
+  constructor(private readonly prisma: PrismaService) {}
 
   @Get()
   FindAll(): string {

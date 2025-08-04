@@ -12,8 +12,8 @@ datasource db {
 }
 
 model Country {
-  Id  Int @id @default(autoincrement())
-  Name String
+  Id  Int @id @default(autoincrement()) 
+  Name String @unique
   Population Int
   Image String
 }
